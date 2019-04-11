@@ -15,7 +15,7 @@ class SecondPage extends React.Component {
   componentDidMount() {
     axios({
       method: "POST",
-      url: "http://www.zillow.com/webservice/GetSearchResults.htm",
+      url: "https://www.zillow.com/webservice/GetSearchResults.htm",
       params: {
         ["zws-id"]: "X1-ZWz1h0dqtywkcr_aroxz",
         address: "5025 184th st",
