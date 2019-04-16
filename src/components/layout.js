@@ -25,10 +25,6 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <link
-          href="https://fonts.googleapis.com/css?family=Montserrat:300,500"
-          rel="stylesheet"
-        />
         <div
           style={{
             margin: `0 auto`,
