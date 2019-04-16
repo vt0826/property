@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import IndexContainer from "../components/indexContainer"
 import "../components/layout.css"
 

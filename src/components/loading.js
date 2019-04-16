@@ -1,5 +1,4 @@
 import React from "react"
-import classNames from "classnames"
 import LinearProgress from "@material-ui/core/LinearProgress"
 
 const styles = {

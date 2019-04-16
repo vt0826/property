@@ -24,7 +24,6 @@ const styles = {
     width: `auto`,
   },
   input: {
-    width: `100%`,
     textRendering: `auto`,
     color: `initial`,
     letterSpacing: `normal`,
@@ -37,8 +36,8 @@ const styles = {
     textAlign: `start`,
     margin: `0 10px 0 10px`,
     font: `400 11px system-ui`,
-    width: `220px`,
     height: `50px`,
+    width: `220px`,
     outline: `none`,
   },
   button: {

@@ -35,7 +35,7 @@ class IndexContainer extends React.Component {
 
     //collect query string from the input form
     const querystingObject = {
-      ["zws-id"]: "X1-ZWz1h0dqtywkcr_aroxz",
+      "zws-id": "X1-ZWz1h0dqtywkcr_aroxz",
       address: event.target[0].value,
       citystatezip: event.target[1].value,
     }
@@ -228,7 +228,11 @@ class IndexContainer extends React.Component {
         <div style={styles.wrapper}>
           <div style={styles.imgWrapper} />
           <figure style={styles.figure}>
-            <img style={styles.img} src={require("../images/background.jpg")} />
+            <img
+              style={styles.img}
+              src={require("../images/background.jpg")}
+              alt="background"
+            />
           </figure>
           <div style={styles.textWrapper}>
             <p style={styles.textProperty}>Property</p>
