@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 
 const styles = {
   container: {
@@ -22,23 +23,6 @@ const styles = {
   inputWrapper: {
     display: `inline-block`,
     width: `auto`,
-  },
-  input: {
-    textRendering: `auto`,
-    color: `initial`,
-    letterSpacing: `normal`,
-    paddingLeft: `12px`,
-    wordSpacing: `normal`,
-    textTransform: `none`,
-    textIndent: `0px`,
-    textShadow: `none`,
-    display: `inline-block`,
-    textAlign: `start`,
-    margin: `0 10px 0 10px`,
-    font: `400 11px system-ui`,
-    height: `50px`,
-    width: `220px`,
-    outline: `none`,
   },
   button: {
     display: `inline-block`,
@@ -75,8 +59,8 @@ const Search = props => (
         }
       >
         <div style={styles.inputWrapper}>
-          <input style={styles.input} placeholder={"Street Address"} />
-          <input style={styles.input} placeholder={"City, State"} />
+          <StyledInput placeholder={"Street Address"} />
+          <StyledInput placeholder={"City, State"} />
         </div>
         <button style={styles.button}>Search</button>
       </div>
@@ -85,3 +69,24 @@ const Search = props => (
 )
 
 export default Search
+
+const StyledInput = styled.input`
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  padding-left: 12px;
+  words-pacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  margin: 10px 10px 20px 10px;
+  font: 400 11px system-ui;
+  height: 50px;
+  width: 220px;
+  outline: none;
+  @media (min-width: 768px) {
+    margin: 0 10px 0 px;
+  }
+`

@@ -6,6 +6,8 @@ import Loading from "../components/loading"
 import ErrorMessage from "../components/error"
 import axios from "axios"
 import { parseString } from "xml2js"
+import Grid from "@material-ui/core/Grid"
+import styled from "styled-components"
 
 class IndexContainer extends React.Component {
   constructor(props) {
@@ -137,15 +139,6 @@ class IndexContainer extends React.Component {
 
   render() {
     const styles = {
-      container: {
-        height: `648px`,
-      },
-      wrapper: {
-        position: `relative`,
-        overflow: `hidden`,
-        display: `block`,
-        height: `100%`,
-      },
       imgWrapper: {
         position: `absolute`,
         top: 0,
@@ -167,39 +160,7 @@ class IndexContainer extends React.Component {
       img: {
         width: `100%`,
       },
-      textWrapper: {
-        zIndex: `100`,
-        position: `relative`,
-        top: `20%`,
-        width: `100%`,
-        maxWidth: `956px`,
-        margin: `0 auto`,
-        padding: `32px`,
-        textAlign: `center`,
-        textRendering: `optimizeLegibility`,
-        color: `white`,
-        animation: `feature-text-anim .75s ease-in-out`,
-        display: `block`,
-      },
-      textProperty: {
-        fontFamily: `Tangerine`,
-        fontSize: `50px`,
-        display: `block`,
-        marginBlockStart: `1em`,
-        marginBlockEnd: `1em`,
-        marginInlineStart: `0px`,
-        marginInlineEnd: `0px`,
-      },
-      textSlogan: {
-        fontFamily: `Montserrat`,
-        fontWeight: 700,
-        fontStyle: `normal`,
-        fontSize: `68px`,
-        letterSpacing: `4px`,
-        textTransform: `uppercase`,
-        lineHeight: `1em`,
-        color: `#fff`,
-      },
+
       bottomContainer: {
         background: `rgba(0,0,0,0)`,
         padding: `60px`,
@@ -223,9 +184,8 @@ class IndexContainer extends React.Component {
     }
 
     return (
-      <div style={styles.container}>
-        <SEO title="index" />
-        <div style={styles.wrapper}>
+      <StyledContainer>
+        <StyledWrapper>
           <div style={styles.imgWrapper} />
           <figure style={styles.figure}>
             <img
@@ -234,11 +194,11 @@ class IndexContainer extends React.Component {
               alt="background"
             />
           </figure>
-          <div style={styles.textWrapper}>
-            <p style={styles.textProperty}>Property</p>
-            <p style={styles.textSlogan}>Reimagine home</p>
-          </div>
-        </div>
+          <StyledTextWrapper>
+            <StyledTextProperty>Property</StyledTextProperty>
+            <StyledTextSlogan>Reimagine home</StyledTextSlogan>
+          </StyledTextWrapper>
+        </StyledWrapper>
         <div style={styles.bottomContainer}>
           <div style={styles.bottomWrapper}>
             <h2 style={{ fontFamily: `Montserrat` }}>
@@ -252,9 +212,114 @@ class IndexContainer extends React.Component {
             {this.renderSearchBox()}
           </div>
         </div>
-      </div>
+      </StyledContainer>
     )
   }
 }
 
 export default IndexContainer
+
+const StyledContainer = styled.div`
+  height: 500px;
+`
+const StyledWrapper = styled.div`
+  position: relative;
+  overflow: hidden;
+  display: block;
+  height: 20%;
+  @media (min-width: 363px) and (max-width: 439px) {
+    height: 25%;
+  }
+  @media (min-width: 440px) and (max-width: 520px) {
+    height: 30%;
+  }
+  @media (min-width: 521px) and (max-width: 590px) {
+    height: 35%;
+  }
+  @media (min-width: 591px) and (max-width: 660px) {
+    height: 40%;
+  }
+  @media (min-width: 661px) and (max-width: 732px) {
+    height: 45%;
+  }
+  @media (min-width: 733px) and (max-width: 816px) {
+    height: 50%;
+  }
+  @media (min-width: 817px) and (max-width: 883px) {
+    height: 55%;
+  }
+  @media (min-width: 884px) and (max-width: 957px) {
+    height: 60%;
+  }
+  @media (min-width: 958px) and (max-width: 1034px) {
+    height: 65%;
+  }
+  @media (min-width: 1035px) and (max-width: 1099px) {
+    height: 70%;
+  }
+  @media (min-width: 1100px) and (max-width: 1174px) {
+    height: 75%;
+  }
+  @media (min-width: 1175px) and (max-width: 1244px) {
+    height: 80%;
+  }
+  @media (min-width: 1245px) and (max-width: 1319px) {
+    height: 85%;
+  }
+  @media (min-width: 1320px) and (max-width: 1399px) {
+    height: 90%;
+  }
+  @media (min-width: 1400px) and (max-width: 1450px) {
+    height: 95%;
+  }
+  @media (min-width: 1451px) {
+    height: 100%;
+  }
+`
+const StyledTextProperty = styled.p`
+  font-family: Tangerine;
+  font-size: 24px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  @media (min-width: 600px) and (max-width: 1200px) {
+    font-size: 36px;
+  }
+  @media (min-width: 1201px) {
+    font-size: 60px;
+  }
+`
+const StyledTextSlogan = styled.p`
+  font-family: Montserrat;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  line-height: 1em;
+  color: #fff;
+  @media (min-width: 600px) and (max-width: 1200px) {
+    font-size: 24px;
+  }
+  @media (min-width: 1201px) {
+    font-size: 68px;
+  }
+`
+const StyledTextWrapper = styled.div`
+  z-index: 100;
+  position: relative;
+  width: 100%;
+  max-width: 956px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  color: white;
+  animation: feature-text-anim 0.75s ease-in-out;
+  display: block;
+  @media (min-width: 600px) {
+    top: 20%;
+  }
+`
