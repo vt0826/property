@@ -34,7 +34,7 @@ To run this project, install it locally using npm:
 ```
 $ cd ../property
 $ npm install
-$ gastby devvelop
+$ gastby develop
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
