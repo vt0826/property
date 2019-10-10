@@ -5,7 +5,7 @@
 
 ## 🧐 What's inside?
 
-A Quick And Esay Way To Find Out Your Property's Worth
+A Quick And Easy Way To Find Out Your Property's Worth
 
 ## Table of contents
 
@@ -15,8 +15,8 @@ A Quick And Esay Way To Find Out Your Property's Worth
 
 ## General info
 
-A Simple to use webiste that helps user quickly to get their house's estimate value.
-User enter their address and will return the property's estimate market value
+A simple to use webiste that helps user quickly to get their house's estimate value.
+User enter their address and will return the property's estimate market value.
 
 ## Technologies
 
